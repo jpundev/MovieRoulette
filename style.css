@@ -1,0 +1,12 @@
+body{
+    background:url("https://kit8.net/images/thumbnails/580/435/detailed/2/cinema@2x.png");
+    padding-top: 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 25%;
+}
+
+form{
+    text-align: center;
+    height: 200px;
+}
