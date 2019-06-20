@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
 
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="roulette.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 
@@ -13,20 +15,30 @@
     <title>MovieRoulette</title>
 </head>
 
-<form>
+
+
+
+
+
+
+
+<body text = "white">
+<h1 >MovieRoulette</h1>
+<form id = "form1" action="" method="post" name="formhtml">
+
+
     <div>
 
-        <label for="uname">Type a Keyword/Genre: </label>
-        <input type="text" id="uname" name="name"
+        <input type="text" id="keyword" name="keywordname"
                placeholder="Lower case, Seperated by commas"size="100">
     </div>
+
+
     <div>
-        <button>Submit</button>
+        <button type="submit" class="btn btn-default" formmethod="post" onclick="roulette()">Submit</button>
     </div>
 </form>
 
-
-<body>
 
 </body>
 </html>
