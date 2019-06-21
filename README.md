@@ -19,6 +19,8 @@
  - Currently I am randomizing among top 20 popular movies among that genre and I will be expanding to encompass more movies
  - It looks ugly I know I'm sorry, I will work on the aesthetics incuding alignments,color contrast, and designs 
  - Some movies have not been released yet, so searches may include Upcoming movies as well ( filter to include this or not )
+ - Include more Error checking to prevent future bugs
+ - Make the Codebase more modular 
  
 
 
