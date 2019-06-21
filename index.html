@@ -24,18 +24,18 @@
 
 <body text = "white">
 <h1 >MovieRoulette</h1>
-<form id = "form1" action="" method="get" name="formhtml">
+<form id = "form1" action="" method="get" name="formhtml" onsubmit="return false">
 
 
     <div>
 
         <input type="search" id="keyword" name="keywordname"
-               placeholder="Enter Genres Separated by commas!"size="100">
+               placeholder="Enter Genres Separated by commas! Eg. Action,Thriller,Romance,..."size="100">
     </div>
 
 
     <div>
-        <button type="button" formmethod="get" onclick="roulette()">Submit</button>
+        <button type="submit" formmethod="get" onclick="roulette()" style="margin-top: 20px" >Submit</button>
     </div>
 </form>
 
