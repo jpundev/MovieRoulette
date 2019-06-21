@@ -95,7 +95,7 @@ function getgenres(genreurl) {
 function discovermovie (genreids) {
 
 
-    let genrestring = genreids.join();
+    let genrestring = genreids.join("%2C");
     let discoverurl = "https://api.themoviedb.org/3/discover/movie?api_key=8d5d0ae3269d0d64b7c94cbeb92c4de7&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&with_genres="+genrestring;
     return fetch(discoverurl)
         .then(response=>response.json())
@@ -115,7 +115,7 @@ function tableCreate(movie,allgenres){
 
     for(let x = 0; x<movie["genre_ids"].length;x++){
         for(let y = 0; y <allgenres.length;y++){
-            if (movie["genre_ids"][x]==allgenres[y]["id"]){
+            if ((movie["genre_ids"][x]==allgenres[y]["id"]) && (!(genrenames.includes(allgenres[y]["names"])))){
                 genrenames.push(allgenres[y]["name"])
             }
         }
