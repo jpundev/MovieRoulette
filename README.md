@@ -1,1 +1,3 @@
 # MovieRoulette
+
+How to use
