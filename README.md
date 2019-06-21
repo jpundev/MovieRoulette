@@ -9,7 +9,7 @@
   
  ## How Do I Use it?
  
- 1. Enter your Genre(s) in the search bar and press enter or click submit
+ 1. Enter your Genre(s) in the search bar and press enter or click submit. Alternatively, you can enter nothing and press submit to generate a random popular movie!
  2. Thats it! You can click "Try another search" to re-search another movie!
  
  
