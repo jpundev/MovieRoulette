@@ -10,12 +10,25 @@ function roulette(){
 
 
     let keywordarray = usergenre.split(',');
+    
+
+    let propergenrearray = [];
+
+
+    for (let x = 0; x < keywordarray.length;x++){
+        keywordarray[x] = keywordarray[x].toLowerCase();
+        keywordarray[x] = keywordarray[x].trim();
+        propergenrearray.push(keywordarray[x].charAt(0).toUpperCase()+keywordarray[x].slice(1));
+
+    }
+
+    console.log(propergenrearray);
 
     let genrepromise = getgenres(genreurl);
     genrepromise.then(function(data){
-        for (let i = 0;i < keywordarray.length;i++) {
+        for (let i = 0;i < propergenrearray.length;i++) {
             for (let x = 0; x < data["genres"].length; x++) {
-                if (data["genres"][x]["name"] == keywordarray[i]) {
+                if (data["genres"][x]["name"] == propergenrearray[i]) {
                     genreids.push(data["genres"][x]["id"])
 
                 }
@@ -96,6 +109,7 @@ function discovermovie (genreids) {
 
 
     let genrestring = genreids.join("%2C");
+    console.log(genrestring);
     let discoverurl = "https://api.themoviedb.org/3/discover/movie?api_key=8d5d0ae3269d0d64b7c94cbeb92c4de7&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&with_genres="+genrestring;
     return fetch(discoverurl)
         .then(response=>response.json())
@@ -115,7 +129,7 @@ function tableCreate(movie,allgenres){
 
     for(let x = 0; x<movie["genre_ids"].length;x++){
         for(let y = 0; y <allgenres.length;y++){
-            if ((movie["genre_ids"][x]==allgenres[y]["id"]) && (!(genrenames.includes(allgenres[y]["names"])))){
+            if ((movie["genre_ids"][x]==allgenres[y]["id"]) && (!(genrenames.includes(allgenres[y]["name"])))){
                 genrenames.push(allgenres[y]["name"])
             }
         }
