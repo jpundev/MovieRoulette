@@ -21,6 +21,7 @@
  - Some movies have not been released yet, so searches may include Upcoming movies as well ( filter to include this or not )
  - Include more Error checking to prevent future bugs
  - Make the Codebase more modular 
+ - Add unit Testing
  
 
 
